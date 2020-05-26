@@ -3,7 +3,10 @@
 
 #include <QObject>
 
-class QSerialPort;
+
+#include <QSerialPort>
+
+
 class RS232SyncSender: public QObject
 {
 
@@ -12,7 +15,7 @@ class RS232SyncSender: public QObject
 public:
     RS232SyncSender(QObject * parent);
     ~RS232SyncSender();
-    void writeRequest(QByteArray data);
+    void writeRequest( const QByteArray & data);
     void processResponse(const QByteArray &data);
 
 
@@ -20,6 +23,12 @@ private:
         QSerialPort * m_serial_port;
          QByteArray buffer;
          bool m_frame_begin = 0;
+         int proc_number = 0;
+         QByteArray m_data;
+        bool start = 0;
+        bool end = 0;
+        bool middle = 0;
+
 
 
 signals:
@@ -27,6 +36,10 @@ signals:
 
 public slots:
     void handleReadyRead();
+    void handleError(QSerialPort::SerialPortError serialPortError);
+    void handleTimeout();
+
+
 
 };
 

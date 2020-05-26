@@ -50,6 +50,32 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="buttonStartTimer">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Timer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonStartTimer2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>240</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Timer 2</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

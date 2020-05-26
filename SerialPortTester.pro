@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS QT_DISABLE_DEPRECATED_BEFORE
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    rs232syncsender.cpp
+    rs232syncsender.cpp \
+    threadsyncserial.cpp
 
 HEADERS += \
     mainwindow.h \
-    rs232syncsender.h
+    rs232syncsender.h \
+    threadsyncserial.h
 
 FORMS += \
     mainwindow.ui
@@ -31,3 +33,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
